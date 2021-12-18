@@ -1,0 +1,42 @@
+﻿@model Assignment_C1.Models.Teacher
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Teacher</h2>
+
+<h2>I Would Like To Update A Particular Teacher</h2>
+<form method="POST" action="/Teacher/Update/@Model.TeacherId">
+    <div>
+        <div><label>Teacher First Name:</label></div>
+        <div><input type="text" value="@Model.TeacherFname" name="f_name"/></div>
+    </div>
+    <div>
+        <div><label>Teacher Last Name:</label></div>
+        <div><input type="text" value="@Model.TeacherLname" name="l_name"/></div>
+    </div>
+    <div>
+        <div><label>Teacher Id:</label></div>
+        <div><input type="number" value="@Model.TeacherId" name="teacher_id"/></div>
+    </div>
+    <div>
+        <div><label>Teacher Employee Number:</label></div>
+        <div><input type="text" value="@Model.TeacherEmpNum" name="emp_num" /></div>
+    </div>
+    <div>
+        <div><label>Teacher Hire Date:</label></div>
+        <div><input type="text" value="@Model.TeacherHireDate" name="hire_date"/></div>
+    </div>
+    <div>
+        <div><label>Teacher Salary:</label></div>
+        <div><input type="number" value="@Model.TeacherSal" name="salary"/></div>
+    </div>
+    <div>
+        <input type="submit" value="Update Teacher"/>
+    </div>
+</form>
+
+<a href="/Teacher/List">Back to List</a>
+<a href="/Teacher/Update/@Model.TeacherId">Update</a>
+<a style="color:#ff0000" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete Teacher</a>
+

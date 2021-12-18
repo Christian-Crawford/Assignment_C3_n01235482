@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Assignment_C1.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Show All The Teachers</h2>
+<div>
+    <a href="/Teacher/New">Add a New Teacher</a>
+</div>
+
+@foreach (var Teacher in Model)
+{
+    <h2>@Teacher.TeacherFname @Teacher.TeacherLname</h2>
+    <p>Teacher Id: @Teacher.TeacherId</p>
+    <p>Teacher Employee Number: @Teacher.TeacherEmpNum</p>
+    <p>Teacher Hire Date: @Teacher.TeacherHireDate</p>
+    <p>Teacher Salary: @Teacher.TeacherSal</p>
+}
